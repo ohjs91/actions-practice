@@ -27,3 +27,14 @@ jobs:
           echo "---------------------"
           cd dist
           ls
+
+      - name: AWS 접근 인증
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-region: ap-northeast-2
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          asw-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+
+      - name: S3 기존 파일들 전체 삭제
+        run: |
+          aws s3 rm --recursive s3://oz-20251229
