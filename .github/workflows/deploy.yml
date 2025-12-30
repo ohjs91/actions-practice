@@ -24,5 +24,6 @@ jobs:
       - name: dist 파일 확인
         run: |
           ls
+          echo "---------------------"
           cd dist
           ls
