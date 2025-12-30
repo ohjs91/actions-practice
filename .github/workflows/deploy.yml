@@ -15,7 +15,7 @@ jobs:
       - name: Repository 파일 출력하기
         run: ls
 
-      - nmae: 의존성 설치
+      - name: 의존성 설치
         run: npm i
 
       - name: 빌드하기
